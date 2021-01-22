@@ -29,35 +29,37 @@ Message: **M:2; P:2**
 Game UI Flow
 
 - First Screen - display game rules with start game button at the center of the screen
- - when game is started ask for the players name
+  - when the game is started player must be asked the name
 - Game Screen 
-  - 4 inputs in one row - for each input digit one
+  - Player name
+  - 4 inputs in one row - one for each input digit 
   - Make Guess button
   - Number of tires left
   - Result of the previous try (previous input and M:m; P:p)
   - Log of previous tries
 - Game Over Screen
+  - Player name
   - You win / You lose message
   - Secret number
   - New Game button
 - Leaderboard
-  - rank layers by success rate - correct guesses / games played
-  - if the success rate is the same - player with less total tries is ranked higher
-  - input minimum games played N - players will be included in leaderbort if at least N games ar played
+  - Rank layers by success rate - correct guesses/games played
+  - If the success rate is the same - player with fewer total tries is ranked higher
+  - Input minimum games played N - players will be included in the leaderboard if at least N games are played
 
 
 Technical Requirements:
-- Use .NET(C#) or Java
+- Use C# or Java
 - Game logic must be implemented in the backend
 - Validations must be implemented in the frontend and backend
 - Implement Unit Tests
-- Log all guesses in db (use in-memory db)
+- For persistence use in-memory db
 
 Bonus points for:
-- Social login ( instead in place of name entering) 
-- UI tests
+- Social login ( instead of manual name enter) 
+- Functional end to end tests
 - Responsive UI
 
 Deliveries:
- - Source Code commited to this repository
- - Compiled solution that can be run with single command / scrpipt commited to repository in folder dist
+ - Source Code committed to this repository
+ - Compiled solution that can be run with a single command/script committed to the repository in folder dist
