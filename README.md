@@ -30,19 +30,19 @@ Game UI Flow
 
 - First Screen - display game rules with start game button at the center of the screen
   - when the game is started player must be asked the name
-- Game Screen 
+- _Game_ Screen 
   - Player name
   - 4 inputs in one row - one for each input digit 
   - Make Guess button
   - Number of tires left
   - Result of the previous try (previous input and M:m; P:p)
   - Log of previous tries
-- Game Over Screen
+- _Game Over_ Screen
   - Player name
   - You win / You lose message
   - Secret number
   - New Game button
-- Leaderboard
+- _Leaderboard_ Screen
   - Rank layers by success rate - correct guesses/games played
   - If the success rate is the same - player with fewer total tries is ranked higher
   - Input minimum games played N - players will be included in the leaderboard if at least N games are played
