@@ -34,7 +34,7 @@ Game UI Flow
   - Player name
   - 4 inputs in one row - one for each input digit 
   - Make Guess button
-  - Number of tires left
+  - Number of tries left
   - Result of the previous try (previous input and M:m; P:p)
   - Log of previous tries
 - _Game Over_ Screen
