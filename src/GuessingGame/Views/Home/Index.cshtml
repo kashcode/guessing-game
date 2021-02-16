@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Rules";
+}
+
+<h1 class="display-4 text-center">Guessing Game</h1>
+<p>Game rules:</p>
+<ul>
+    <li>Program chooses a random secret number with 4 digits.</li>
+    <li>All digits in the secret number are different.</li>
+    <li>Player has 8 tries to guess the secret number.</li>
+    <li>
+        After each guess program displays the message "M:m; P:p" where:
+        <ol>m - number of matching digits but not on the right places</ol>
+        <ol>p - number of matching digits on exact places</ol>
+    </li>
+    <li>Game ends after 8 tries or if the correct number is guessed.</li>
+</ul>
+<div class="text-center">
+    <a class="btn btn-primary" asp-controller="Game" asp-action="Index">
+        Okay, let's play        
+    </a>    
+</div>

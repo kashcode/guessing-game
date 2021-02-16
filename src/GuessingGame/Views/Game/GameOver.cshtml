@@ -1,0 +1,24 @@
+﻿@model GuessingGame.Models.Game
+
+@{
+    ViewData["Title"] = "Game Over";
+}
+
+<div class="text-center">
+    <h3>@User.Identity.Name</h3>
+
+    @if (Model.SecretGuessed)
+    {
+        <h4>You win!</h4>
+    }
+    else
+    {
+        <h4>You lose!</h4>
+    }
+
+    <h5>Secret number: @string.Join("", Model.Secret)</h5>
+
+    <a class="btn btn-primary btn-lg" asp-controller="Game" asp-action="Index">
+        Play again
+    </a>
+</div>

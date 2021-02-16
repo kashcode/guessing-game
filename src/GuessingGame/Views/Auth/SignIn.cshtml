@@ -1,0 +1,57 @@
+﻿@inject IAuthenticationSchemeProvider SchemeProvider
+
+@using Microsoft.AspNetCore.Authentication
+
+@{
+    ViewBag.Title = "Sign in";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h4>Facebook app is in development mode, please use these test users:</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>User ID</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Daniel Alfcfeedaijae Fergiewitz</td>
+                    <td>104026825062498</td>
+                    <td>bshirxqbib_1613248086@tfbnw.net</td>
+                    <td>bshirxqbib</td>
+                </tr>
+                <tr>
+                    <td>Ullrich Aleijcgbhhegj Shepardwitz</td>
+                    <td>100059037288570</td>
+                    <td>dtirhyqwep_1613248086@tfbnw.net</td>
+                    <td>dtirhyqwep</td>
+                </tr>
+                <tr>
+                    <td>Maria Aldbgeeicbgjb Qinwitz</td>
+                    <td>341493160619212</td>
+                    <td>yygtitgocn_1613248086@tfbnw.net</td>
+                    <td>yygtitgocn</td>
+                </tr>
+                <tr>
+                    <td>Matthew Aldafchfcgebf Bushakman</td>
+                    <td>100041638637526</td>
+                    <td>lqasavkktb_1613248086@tfbnw.net</td>
+                    <td>lqasavkktb</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="btn-group" role="group">
+            @foreach (var provider in await SchemeProvider.GetRequestHandlerSchemesAsync())
+            {
+                <a class="btn btn-primary" asp-route-returnUrl="@Context.Request.Query["returnUrl"]" asp-route-provider="@provider.Name" asp-action="SignIn">
+                    <i class="mdi mdi-@provider.Name.ToLower()"></i> @provider.Name
+                </a>
+            }
+        </div>
+    </div>
+</div>
